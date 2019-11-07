@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#Install VBoxGuestAdditions
+#curl https://download.virtualbox.org/virtualbox/6.0.14/VBoxGuestAdditions_6.0.14.iso -o /tmp/VBoxGuestAdditions_6.0.14.iso
+#sudo mount /tmp/VBoxGuestAdditions_6.0.14.iso /mnt -o loop
+mount /home/vagrant/VBoxGuestAdditions.iso /mnt -o loop
+/mnt/VBoxLinuxAdditions.run
+
+
 # clean all
 yum update -y
 yum clean all
